@@ -1,0 +1,16 @@
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.app-card {
+  max-width: 20rem;
+  min-width: 20rem;
+  min-height: 1rem;
+  margin: 1.5rem;
+}
+
+.cont {
+  margin-bottom: 3rem;
+}

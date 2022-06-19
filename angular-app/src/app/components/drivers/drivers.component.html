@@ -1,0 +1,24 @@
+  <div *ngIf="connectionError" style="align-text: center" >
+    <div style="text-align: center"><h1>connecting</h1></div>
+    <mat-progress-bar mode="buffer" ></mat-progress-bar>
+  </div>
+
+  <div class="cont" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="start center">
+    <mat-card *ngFor="let driver of drivers" fxFlex="calc(30%-25px)" fxFlex.sm="calc(50%-25px)" class="app-card">
+      <app-driver
+        [driver]="driver"
+        [updateChanges]="updateChanges"
+      ></app-driver>
+    </mat-card>
+  </div>
+
+  <div class="footer">
+    <mat-paginator  [length]="pagination.length"
+                   [pageSize]="pagination.pageSize"
+                   [pageSizeOptions]="pagination.pageSizeOptions"
+                   [pageIndex]="pagination.pageIndex"
+                   (page)="handlePageEvent($event)"
+                    [showFirstLastButtons] = true
+                   aria-label="Select page">
+    </mat-paginator>
+  </div>

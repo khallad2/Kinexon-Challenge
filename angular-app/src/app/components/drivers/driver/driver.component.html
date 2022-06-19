@@ -1,0 +1,23 @@
+<mat-card-subtitle>{{driver.carMake}}</mat-card-subtitle>
+<mat-card-title><p>{{driver.driverName}}</p></mat-card-title>
+<mat-card-content>
+  <p><strong>Phone: </strong><i>{{driver.driverPhone}}</i></p>
+  <p><strong>Language: </strong><i>{{driver.driverLanguage}}</i></p>
+  <p><strong>Gender: </strong><i>{{driver.driverGender}}</i></p>
+  <p><strong>Origin City: </strong><i>{{driver.driverCityOrigin}}</i></p>
+  <p class="info"><strong>Info: </strong> <i>{{driver.driverInfo}}</i></p>
+</mat-card-content>
+
+<mat-divider inset></mat-divider>
+
+<mat-card-actions>
+  <strong>
+    <p>location:
+      <i >[ {{driver.location[0]}} , {{driver.location[1]}} ]</i>
+    </p>
+  </strong>
+  <mat-spinner diameter="20" color="accent" *ngIf="updateChanges"></mat-spinner>
+</mat-card-actions>
+
+
+
