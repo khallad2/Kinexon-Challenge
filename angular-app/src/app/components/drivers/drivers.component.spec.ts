@@ -1,7 +1,5 @@
-import {ComponentFixture, fakeAsync, TestBed} from '@angular/core/testing';
-
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 import { DriversComponent } from './drivers.component';
-import {HttpClient} from "@angular/common/http";
 import {HttpClientTestingModule} from "@angular/common/http/testing";
 import {IPaginate} from "../../interfaces/pagination/IPaginate";
 import {environment} from "../../../environments/environment";
@@ -14,9 +12,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {AppRoutingModule} from "../../app-routing.module";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {DriverService} from "../../services/driver/driver.service";
-import {IDriver} from "../../interfaces/driver/IDriver";
 import {of} from "rxjs";
-import {delay} from "rxjs/operators";
 
 
 describe('DriverComponent', () => {
@@ -61,6 +57,7 @@ describe('DriverComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
   it('should create', async () => {
     await component.ngOnInit();
     await expect(component.drivers).not.toBe([]);
